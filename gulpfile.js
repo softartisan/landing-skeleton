@@ -55,4 +55,4 @@ function browserSyncReload(done) {
   done();
 }
 
-exports.default = gulp.series(browserSync, gulp.parallel(scssTask, jsTask), watchTask);
+exports.default = gulp.series(gulp.parallel(scssTask, jsTask), browserSync, watchTask);
