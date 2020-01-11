@@ -1,3 +1,129 @@
-.testing {
-    width: 100%;
+@import 'reset';
+@import 'variables'; 
+
+@font-face {
+    font-family: 'steelworsteelworksvintagedemo';
+    src: url('fonts/steelworksvintagedemo-rr98-webfont.woff2') format('woff2'),
+         url('fonts/steelworksvintagedemo-rr98-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
+body {
+    background: $primary-white;
+}
+.logo {
+    text-align: center;
+    font-family: steelworsteelworksvintagedemo;
+    h2:nth-child(1){
+        color: $primary-white;
+        font-size: 24px;
+        font-weight: 900;
+        // text-shadow: 1px 1px white;
+    }
+    h2:nth-child(2){ 
+        font-size: 24px;
+        color: $primary-red;
+        font-weight: 900;
+        // text-shadow: 1px 1px white;
+    }
+}
+
+nav {
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background: $primary-black;
+    .logo {
+        width: 10%;
+    }
+    ul {
+        font-family: steelworsteelworksvintagedemo;
+        font-weight: 600;
+        width: 50%;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-around;
+        li {
+            color:$primary-red;
+            &:hover {
+                border-bottom: 2px solid $primary-red;
+                color:$primary-white;
+                transition: 0.3s;
+            }
+            display: flex;
+            align-items: center;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+section.blackboard {
+    height: calc(100vh - 70px);
+    padding-top: 70px;
+    width: 90%;
+    margin: auto;
+    div.container {
+        padding: 15px;
+        font-family: steelworsteelworksvintagedemo;
+        height: calc(100% - 50px);
+        border: 10px ridge darken($primary-red, 10%);
+        background: rgb(45,40,40);
+        background: linear-gradient(0deg, rgba(45,40,40,1) 0%, rgba(4,4,4,1) 100%);
+        color: $primary-white;
+        h2 {
+            font-size: 48px;
+            text-align: center;
+        }
+        .body{
+            h2 {
+                font-size: 36px;
+            }
+            display: flex;
+            justify-content: space-between;
+            .cold {
+                width: 50%;
+                h2 {
+                    color: turquoise;
+                }
+                .item {
+                    padding-bottom: 10px;
+                    h3 {
+                        font-size: 24px;
+                        color: turquoise;
+                        line-height: 40px;
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .hot {
+                width: 50%;
+                h2 {
+                    color: tomato;
+                }
+                .item {
+                    padding-bottom: 10px;
+                    h3 {
+                        font-size: 24px;
+                        color: tomato;
+                        line-height: 40px;
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+

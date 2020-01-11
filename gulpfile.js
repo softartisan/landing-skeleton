@@ -7,7 +7,7 @@ const browsersync = require('browser-sync');
 
 const files = {
   jsPath: 'src/js/*.js',
-  scssPath: 'src/scss/*.scss'
+  scssPath: 'src/scss/styles.scss'
 }
 
 const scssTask = () => {
