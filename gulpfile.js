@@ -7,7 +7,8 @@ const browsersync = require('browser-sync');
 
 const files = {
   jsPath: 'src/js/*.js',
-  scssPath: 'src/scss/styles.scss'
+  scssPath: 'src/scss/styles.scss',
+  scssGlobal: 'src/scss/*.scss'
 }
 
 const scssTask = () => {
@@ -26,7 +27,7 @@ const jsTask = () => {
 
 const watchTask = () => {
   gulp.watch(
-    [files.scssPath, files.jsPath],
+    [files.scssGlobal, files.jsPath],
     gulp.parallel(scssTask, jsTask)
   );
   gulp.watch(
